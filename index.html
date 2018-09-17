@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML5 and CSS3 exercise</title>
     <style>
+
+        body {
+    margin: 2;
+    font-family: Arial;
+    font-size: 17px;
+}
         ul {
     list-style-type: none;
     margin: 0;
@@ -34,6 +40,17 @@ li a:hover:not(.active) {
     float: left;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
 
     </style>
 </head>
@@ -42,9 +59,9 @@ li a:hover:not(.active) {
     <header>
         <nav>
             <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>Contact</a></li>
                 <li class="home-left"><a href="#home"> Home </a></li>
             </ul>
         </nav>
@@ -52,6 +69,9 @@ li a:hover:not(.active) {
         <section>
             <div class="jumbotron">
                 <h1>Welcome to Cika Webpage</h1>
+                <video width="1100" autoplay muted loop id="mainVideo">
+                    <source src="canal.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
@@ -65,7 +85,11 @@ li a:hover:not(.active) {
             </section>
 
             <section>
-                <h2>Contact</h2>
+                <h2><a id="portfolio">Portfolio</a></h2>
+            </section>
+
+            <section>
+                <h2><a id="contact">Contact</a></h2>
                 <form action="http://compufirm.nl/demo/formhandler.php">
                     <label for="name">What is your name?
                             <input type="text" id="name" name="full-name" required></label>
@@ -105,6 +129,7 @@ li a:hover:not(.active) {
             <br>
 
             <section>
+                <!-- <h2>Video</h2>
                 <button onclick="playVid()">Play Video</button>
                 <button onclick="pauseVid()">Pause video</button>
                 <button onclick="setHalfVolume()">Set volume to 0.2</button>
@@ -112,7 +137,7 @@ li a:hover:not(.active) {
 
                 <video id="myVideo" width="400" controls>
                     <source src="jumping.mp4" type="video/mp4">
-                </video>
+                </video> -->
 
             </section>
 
@@ -130,7 +155,7 @@ li a:hover:not(.active) {
         var twitterName = document.getElementById("twitname");
         var form = document.getElementsByTagName('form');
 
-        var vid = document.getElementById("myVideo");
+        // var vid = document.getElementById("myVideo");
         
         //function for the forms
         email.addEventListener("input", function (event) {
@@ -151,18 +176,18 @@ li a:hover:not(.active) {
 
         //functions for the videos
         
-        function playVid() {
-            vid.play();
-        }
+        // function playVid() {
+        //     vid.play();
+        // }
 
-        function pauseVid() {
-            vid.pause();
-        }
+        // function pauseVid() {
+        //     vid.pause();
+        // }
 
-        function setFullVolume(){
-            vid.volume = 1.0;
+        // function setFullVolume(){
+        //     vid.volume = 1.0;
 
-        }
+        // }
 
     </script>
     
