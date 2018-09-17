@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 and CSS3 exercise</title>
+    <style>
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.home-left {
+    float: left;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Contact</a></li>
+                <li class="home-left"><a href="#home"> Home </a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="jumbotron">
+                <h1>Welcome to Cika Webpage</h1>
+            </div>
+        </section>
+
+    </header>
+    
+    <main>
+        <article>
+            <section>
+                <h2><a id="about">About Cika</a></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <form action="http://compufirm.nl/demo/formhandler.php">
+                    <label for="name">What is your name?
+                            <input type="text" id="name" name="full-name" required></label>
+                            <br>
+
+                    <label for="email">What is your email?
+                    <input type="email" id="email" name="email-address" placeholder="example@example.com" required></label>
+                    <br>
+
+                    <label for="phone">Your phone number?
+                    <input type="tel" id="phone" name="phone-number"
+                            pattern="(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)"
+                            required></label>
+
+                    <label for="twitname">What is your twitter user name?
+                    <input id="twitname" name="twitter-name" pattern="^[A-Za-z0-9_]{1,32}$" required></label>        
+                    <br>
+
+
+                    <label for="skills">Your favorite skill:
+                    <input list="skills" name="it-skills" required>
+                    <datalist id="skills">
+                        <option value="javascript">
+                        <option value="html">
+                        <option value="css">
+                        <option value="react">
+                    </datalist>
+                
+                </label>
+                    <br>
+
+                    <button>Submit </button>
+                </form>
+
+            </section>
+
+            <br>
+
+            <section>
+                <button onclick="playVid()">Play Video</button>
+                <button onclick="pauseVid()">Pause video</button>
+                <button onclick="setHalfVolume()">Set volume to 0.2</button>
+                <button onclick="setFullVolume()">Set volume to 1.0</button>
+
+                <video id="myVideo" width="400" controls>
+                    <source src="jumping.mp4" type="video/mp4">
+                </video>
+
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <section>
+            <h3>It is the footer area</h3>
+        </section>
+    </footer>
+
+    <script>
+        var email = document.getElementById("email");
+        var twitterName = document.getElementById("twitname");
+        var form = document.getElementsByTagName('form');
+
+        var vid = document.getElementById("myVideo");
+        
+        //function for the forms
+        email.addEventListener("input", function (event) {
+            if (email.validity.typeMismatch) {
+                email.setCustomValidity("I expect an e-mail from you, darling!");
+                } else {
+                    email.setCustomValidity("");
+                    }
+                    });
+
+        twitterName.addEventListener("input", function (event){
+            if (twitterName.validity.patternMismatch) {
+                twitterName.setCustomValidity("I want your real twitter name, darling!!");
+            } else {
+                email.setCustomValidity("");
+            }
+        }); 
+
+        //functions for the videos
+        
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+
+        function setFullVolume(){
+            vid.volume = 1.0;
+
+        }
+
+    </script>
+    
+</body>
+</html>
+
+<!-- http://compufirm.nl/demo/formhandler.php for form action
