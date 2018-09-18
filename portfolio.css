@@ -1,0 +1,120 @@
+body {
+    margin: 5;
+    font-family: Arial;
+    font-size: 17px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.jumbotron {
+    position: relative;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.home-left {
+    float: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.greeting {
+    font-size: 50px;
+    position: absolute;
+    color: #f1f1f1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.the-main-part {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+a[id] {
+    color: red;
+}
+
+video[id] {
+    display: block;
+    width: 100%;
+}
+
+:target {
+    background: yellowgreen;
+    transition: background-color 2s ease-in-out;
+    transform: rotate(20deg);
+}
+
+.port-box {
+    line-height: 90px;
+    vertical-align: middle;
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(port1.jpg);
+    background-size: 100%;
+}
+
+.port-box:hover {
+    outline: 20px ridge #0D2615;
+    outline-offset: 16px;
+    top: 50%;
+    left: 50%;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+input:focus {
+    background-color: yellowgreen;
+}
+
+.contact-section {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
