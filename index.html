@@ -39,9 +39,7 @@
 
             <section class="portfolio-section">
                 <h2><a id="portfolio">Portfolio</a></h2>
-                <div class="port-box">test </div>
-                <div class="port-box">test</div>
-                <div class="port-box">test</div>
+                <div id="portBoxes"></div>
             </section>
 
             <section class="contact-section">
@@ -97,6 +95,12 @@
         var twitterName = document.getElementById("twitname");
         var form = document.getElementsByTagName('form');
         
+        var boxesPortofolio = `<div class="port-box">test</div>`
+
+         //portfolio boxes
+         var boxesPortofolio = `<div class="port-box">test</div>`
+        document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(3)
+
         //function for the forms
         email.addEventListener("input", function (event) {
             if (email.validity.typeMismatch) {
@@ -112,11 +116,9 @@
             } else {
                 email.setCustomValidity("");
             }
-        }); 
+        });
 
     </script>
     
 </body>
 </html>
-
-<!-- http://compufirm.nl/demo/formhandler.php for form action
