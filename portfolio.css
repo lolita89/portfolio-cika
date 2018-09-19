@@ -6,13 +6,15 @@
 }
 
 body {
-    margin: 5;
+    margin: 0;
     font-family: Arial;
     font-size: 17px;
     text-align: center;
     color: var(--main-text-color);
+    font-family: 'Roboto Mono', monospace;
 }
 
+/* Header area */
 ul {
     list-style-type: none;
     margin: 0;
@@ -50,6 +52,10 @@ li a:hover:not(.active) {
 /* * {
     box-sizing: border-box;
 } */
+video[id] {
+    display: block;
+    width: 100%;
+}
 
 .greeting {
     font-size: 50px;
@@ -60,6 +66,7 @@ li a:hover:not(.active) {
     transform: translate(-50%, -50%);
 }
 
+/* The main body area*/
 .the-main-part {
     margin-left: auto;
     margin-right: auto;
@@ -70,17 +77,13 @@ a[id] {
     color: var(--main-text-color);
 }
 
-video[id] {
-    display: block;
-    width: 100%;
-}
-
 :target {
     background: var(--main-middle-color);
     transition: background-color 2s ease-in-out;
     transform: rotate(20deg);
 }
 
+/* Portfolio show section */
 .port-box {
     line-height: 90px;
     vertical-align: middle;
@@ -107,25 +110,62 @@ video[id] {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-input:focus {
+/* Contact */
+input:focus, textarea:focus {
     background-color: var(--main-second-color);
 }
 
 .contact-section {
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: var(--main-bg-color);
     padding: 20px;
 }
 
 input, textarea {
+    font-size: 1em;
+    text-align: center;
     width: 100%;
     padding: 12px;
     border: 1px solid var(--main-middle-color);
-    border-radius: 4px;
+    border-radius: 20px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+}
+
+button {
+    border-radius: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 1.5em solid var(--main-middle-color);
+    background-color: var(--main-middle-color);
+}
+
+button:hover {
+    font-size: 2em;
+    transform: rotate(10deg);
+}
+
+/* Footer */
+
+.footer {
+    font-size: 30px;
+    padding: 40px 0;
+    background-color: var(--main-bg-color);
+}
+
+.fab {
+    color: var(--main-text-color);
+}
+
+.fab:hover {
+    color: black;
+    font-size: 35px;
+}
+
+.copyright {
+    font-size: 15px;
 }
 
 @media (max-width: 500px) {
