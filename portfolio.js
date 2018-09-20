@@ -17,7 +17,7 @@ function myFunction() {
 
  //portfolio boxes
  var boxesPortofolio = `<div class="port-box">My Project</div>`
-document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(3)
+document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(2)
 
 //function for the forms
 email.addEventListener("input", function (event) {
@@ -44,3 +44,4 @@ phone.addEventListener("input", function (event) {
 //         email.setCustomValidity("");
 //     }
 // });
+
