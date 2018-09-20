@@ -5,6 +5,16 @@ var form = document.getElementsByTagName('form');
 
 var boxesPortofolio = `<div class="port-box">test</div>`
 
+//nav responsive function
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
  //portfolio boxes
  var boxesPortofolio = `<div class="port-box">My Project</div>`
 document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(3)
