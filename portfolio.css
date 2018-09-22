@@ -3,6 +3,10 @@
     --main-text-color: #b9936c;
     --main-middle-color: #dac292;
     --main-second-color: #c4b7a6;
+    --main-bright-color: #FFE4C4;
+    --main-white-color: white;
+    --main-font: 'Roboto Mono', monospace;
+    --second-font: 'Spirax', cursive;
 }
 
 body {
@@ -11,7 +15,8 @@ body {
     font-size: 17px;
     text-align: center;
     color: var(--main-text-color);
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--main-font);
+    background-color: var(--main-bg-color);
 }
 
 /* Header area */
@@ -56,6 +61,7 @@ video[id] {
 }
 
 .greeting {
+    font-family: var(--second-font);
     font-size: 50px;
     position: absolute;
     color: var(--main-bg-color);
@@ -76,12 +82,26 @@ a[id] {
 }
 
 :target {
-    background: var(--main-middle-color);
+    background: var(--main-white-color);
     transition: background-color 2s ease-in-out;
     transform: rotate(20deg);
 }
 
+h2 {
+    font-family: var(--second-font);
+}
+
+/* About section */
+
+.about-section {
+    padding: 20px;
+}
+
 /* Portfolio show section */
+.portfolio-section {
+    padding: 20px;
+}
+
 .port-box {
     line-height: 90px;
     vertical-align: middle;
@@ -91,6 +111,7 @@ a[id] {
     height: 200px;
     background-image: url(port1.jpg);
     background-size: 100%;
+    
 }
 
 .port-box:hover {
@@ -117,7 +138,13 @@ input:focus, textarea:focus {
     border-radius: 20px;
     background-color: var(--main-bg-color);
     padding: 20px;
+    border: solid var(--main-text-color);
 }
+
+/* .contact-section:hover {
+    background-color: var(--main-bright-color);
+    
+} */
 
 input, textarea {
     font-size: 1em;
@@ -135,7 +162,7 @@ input, textarea {
 button {
     border-radius: 20px;
     font-family: 'Roboto Mono', monospace;
-    color: white;
+    color: var(--main-white-color);
     font-size: 1.5em solid var(--main-middle-color);
     background-color: var(--main-middle-color);
 }
@@ -146,18 +173,21 @@ button:hover {
 }
 
 /* map */
+.map-section {
+    padding: 20px;
+}
 
 iframe {
     width: 400px;
-    height: 300px;
+    height: 200px;
     border: solid var(--main-text-color);
 }
 
 iframe:hover {
-    width: 700px;
-    height: 600px;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    width: 600px;
+    height: 400px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
 }
 
 /* Footer */
@@ -165,8 +195,12 @@ iframe:hover {
 .footer {
     font-size: 30px;
     padding: 40px 0;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-white-color);
 }
+
+/* .footer:hover {
+    background-color: var(--main-bright-color);
+} */
 
 .fab {
     color: var(--main-text-color);
