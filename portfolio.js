@@ -15,9 +15,9 @@ function responsiveNav() {
     }
 };
 
- //portfolio boxes
- var boxesPortofolio = `<div class="port-box">My Project</div>`
-document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(2);
+//  //portfolio boxes
+//  var boxesPortofolio = `<div class="port-box">My Project</div>`
+// document.getElementById("portBoxes").innerHTML = boxesPortofolio.repeat(2);
 
 //function for the forms
 email.addEventListener("input", function (event) {

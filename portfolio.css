@@ -102,19 +102,23 @@ h2 {
     padding: 20px;
 }
 
-.port-box {
+.project {
+    color: var(--main-white-color);
     line-height: 90px;
     vertical-align: middle;
-    margin: 20px;
+    text-align: center;
+    margin: auto;
     display: inline-block;
     width: 200px;
-    height: 200px;
-    background-image: url(port1.jpg);
+    height: 100px;
+    padding: 30px;
+    border: solid var(--main-bright-color);
+    background-color: var(--main-second-color);
     background-size: 100%;
-    
+    background-image: url("https://images.template.net/wp-content/uploads/2015/11/24205742/Wood-Brown-Background-Download.jpg")
 }
 
-.port-box:hover {
+.project:hover {
     outline: 20px ridge var(--main-middle-color);
     outline-offset: 16px;
     top: 50%;
@@ -147,6 +151,7 @@ input:focus, textarea:focus {
 } */
 
 input, textarea {
+    font-family: var(--main-font);
     font-size: 1em;
     text-align: center;
     width: 100%;
@@ -244,6 +249,7 @@ iframe:hover {
       right: 0;
       top: 0;
     }
+
     .topnav.responsive a {
       float: none;
       display: block;

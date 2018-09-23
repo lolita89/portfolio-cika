@@ -1,0 +1,34 @@
+/* Basic positioning, colors and fonts */
+:root {
+    --primary-color: #fff;
+    --background-color: #eeeeee;
+    --headings-color: #0f9dce;
+    --text-color: #616161;
+    --border-color: #bdbdbd;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+}
+main {
+    width: 95%;
+    margin: 80px auto 0 auto;
+}
+h1, h2, h3 {
+    color: var(--headings-color);
+}
+
+@media (min-width: 600px) {
+    main {
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        width: 70%;
+    }
+}
