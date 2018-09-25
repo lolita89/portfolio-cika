@@ -164,7 +164,7 @@ input, textarea {
     resize: vertical;
 }
 
-button {
+.contact-submit {
     border-radius: 20px;
     font-family: 'Roboto Mono', monospace;
     color: var(--main-white-color);
@@ -172,7 +172,7 @@ button {
     background-color: var(--main-middle-color);
 }
 
-button:hover {
+.contact-submit:hover {
     font-size: 2em;
     transform: rotate(10deg);
 }
@@ -209,10 +209,6 @@ iframe:hover {
 
 .fab {
     color: var(--main-text-color);
-}
-
-.fab:hover {
-    font-size: 35px;
 }
 
 .fa-facebook-square:hover {
