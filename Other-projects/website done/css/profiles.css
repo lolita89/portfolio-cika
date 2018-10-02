@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #fff; /*for background of places with texts*/
+    --background-color: #eeeeee; /*for background of the body*/
+    --headings-color: #0f9dce;
+    --text-color: #616161;
+    --border-color: #bdbdbd;
+ }
+ 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 3rem;
+    color: #0f9dce;
+    position: relative;
+    float: right;
+    margin-right: 140px;
+}
+
+i:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+    color: #29b6e7;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 50px;
+    height: auto;
+    max-width: 968px;
+    text-align: center;
+
+}
+
+.box {
+    display: inline-block;
+    width: 20%;
+    margin: 5px 5px 20px 5px;
+    padding: 0;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    background: #fff;
+}
+
+.box:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+
+.box .box-img {
+    width: 100%;
+}
+
+.box .box-name {
+    margin: 0;
+    color: #0f9dce;
+
+}
+
+.box .box-title {
+    color: darkgray;
+}
+
+@media only screen and (max-width: 768px) {
+    .box {
+        width: 40%;
+        text-align: center;
+
+    }
+    .container {
+        text-align: center;
+    }
+
+    i {
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        width: 80%;
+    }
+
+    i {
+        margin-right: 40px;
+    }
+}
+
+/* Add profile page */
+
+.form {
+    margin: 0 auto;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: var(--headings-color);
+}
