@@ -1,34 +1,37 @@
-:root {
-    --main-bg-color: #e6e2d3;
-    --main-text-color: #b9936c;
-    --main-middle-color: #dac292;
-    --main-second-color: #c4b7a6;
-    --main-bright-color: #FFE4C4;
-    --main-white-color: white;
-    --main-font: 'Roboto Mono', monospace;
-    --second-font: 'Spirax', cursive;
+/* Variables */
+$main-color: #e6e2d3;
+$main-text-color: #b9936c;
+$main-middle-color: #dac292;
+$main-second-color: #c4b7a6;
+$main-bright-color: #FFE4C4;
+$main-white-color: white;
+$main-font: 'Roboto Mono', monospace;
+$second-font: 'Spirax', cursive;
+
+/*mixins*/
+@mixin body-part {
+    margin: 0;
+    font-family: $main-font;
+    font-size: 17px;
+    text-align: center;
+    color: $main-text-color;
+    background-color: $main-color;
 }
 
 body {
-    margin: 0;
-    font-family: Arial;
-    font-size: 17px;
-    text-align: center;
-    color: var(--main-text-color);
-    font-family: var(--main-font);
-    background-color: var(--main-bg-color);
+    @include body-part;
 }
 
 /* Header area */
 .topnav {
     overflow: hidden;
-    background-color:var(--main-bg-color);
+    background-color: $main-color;
   }
   
   .topnav a {
     float: left;
     display: block;
-    color: var(--main-text-color);
+    color: $main-text-color;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -36,23 +39,23 @@ body {
   }
   
   .topnav a:hover {
-    background-color: var(--main-text-color);
-    color: var(--main-bg-color);
+    background-color: $main-text-color;
+    color: $main-color;
   }
-  
+
   .active {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
+    background-color: $main-color;
+    color: $main-text-color;
   }
   
   .topnav .icon {
     display: none;
   }
 
-/* after navbar */
+  /* after navbar */
 .jumbotron {
     position: relative;
-    color: var(--main-bg-color);
+    color: $main-color;
 }
 
 video[id] {
@@ -61,10 +64,10 @@ video[id] {
 }
 
 .greeting {
-    font-family: var(--second-font);
+    font-family: $second-font;
     font-size: 50px;
     position: absolute;
-    color: var(--main-bg-color);
+    color: $main-color;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -78,17 +81,17 @@ video[id] {
 }
 
 a[id] {
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 :target {
-    background: var(--main-white-color);
+    background:$main-white-color;
     transition: background-color 2s ease-in-out;
     transform: rotate(20deg);
 }
 
 h2 {
-    font-family: var(--second-font);
+    font-family: $second-font;
 }
 
 /* About section */
@@ -103,7 +106,7 @@ h2 {
 }
 
 .project {
-    color: var(--main-white-color);
+    color: $main-white-color;
     line-height: 90px;
     vertical-align: middle;
     text-align: center;
@@ -112,14 +115,14 @@ h2 {
     width: 200px;
     height: 100px;
     padding: 30px;
-    border: solid var(--main-bright-color);
-    background-color: var(--main-second-color);
+    border: solid $main-bright-color;
+    background-color: $main-second-color;
     background-size: 100%;
     background-image: url("https://images.template.net/wp-content/uploads/2015/11/24205742/Wood-Brown-Background-Download.jpg")
 }
 
 .project:hover {
-    outline: 20px ridge var(--main-middle-color);
+    outline: 20px ridge $main-middle-color;
     outline-offset: 16px;
     top: 50%;
     left: 50%;
@@ -135,28 +138,23 @@ h2 {
 
 /* Contact */
 input:focus, textarea:focus {
-    background-color: var(--main-second-color);
+    background-color: $main-second-color;
 }
 
 .contact-section {
     border-radius: 20px;
-    background-color: var(--main-bg-color);
+    background-color: $main-color;
     padding: 20px;
-    border: solid var(--main-text-color);
+    border: solid $main-text-color;
 }
 
-/* .contact-section:hover {
-    background-color: var(--main-bright-color);
-    
-} */
-
 input, textarea {
-    font-family: var(--main-font);
+    font-family: $main-font;
     font-size: 1em;
     text-align: center;
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--main-middle-color);
+    border: 1px solid $main-middle-color;
     border-radius: 20px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -166,10 +164,10 @@ input, textarea {
 
 .contact-submit {
     border-radius: 20px;
-    font-family: 'Roboto Mono', monospace;
-    color: var(--main-white-color);
-    font-size: 1.5em solid var(--main-middle-color);
-    background-color: var(--main-middle-color);
+    font-family: $main-font;
+    color: $main-white-color;
+    font-size: 1.5em solid $main-middle-color;
+    background-color: $main-middle-color;
 }
 
 .contact-submit:hover {
@@ -185,7 +183,7 @@ input, textarea {
 iframe {
     width: 400px;
     height: 200px;
-    border: solid var(--main-text-color);
+    border: solid $main-text-color;
 }
 
 iframe:hover {
@@ -200,15 +198,11 @@ iframe:hover {
 .footer {
     font-size: 30px;
     padding: 40px 0;
-    background-color: var(--main-white-color);
+    background-color: $main-white-color;
 }
 
-/* .footer:hover {
-    background-color: var(--main-bright-color);
-} */
-
 .fab {
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 .fa-facebook-square:hover {
@@ -255,5 +249,4 @@ iframe:hover {
     .map-section {
         display: none;
     }
-
 }
