@@ -1,1 +1,131 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/foto-cika.jpg"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><title>Cika's Page</title><link href="https://fonts.googleapis.com/css?family=Courgette|Francois+One|Permanent+Marker" rel="stylesheet"><link href="/static/css/main.03af8636.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.305bc97e.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="c-logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Spirax" rel="stylesheet">
+    <title>Cika Portfolio</title>
+    <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <section>
+            <div class="jumbotron">
+                <h1 class="greeting">Welcome to Cika Webpage</h1>
+                <video autoplay muted loop id="mainVideo">
+                    <source src="canal.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+        <article class="the-main-part">
+            <section class="about-section">
+                <h2><a id="about">About Cika</a></h2>
+                <p>Cika is a passionate frontend developer. The user interface blows her mind. She loves working with HTML5, CSS3, SASS, BEM, Javascript and React. Her master study in business innovation led her to fall in love with the technology and end up teaching herself to code.
+                    She loves to learn new things and would love to find a job that can develop herself even more, especially in the frontend development field. Let's check out <a class="git-link" href="https://github.com/lolita89"><span>her GitHub</span></a> to see the project she did.
+                </p>
+            </section> 
+
+            <section class="portfolio-section">
+                <h2><a id="portfolio">Portfolio</a></h2>
+                <div id="portBoxes">
+
+                    <a href="https://slimy-passenger.surge.sh">
+                        <div class="project">
+                            Hangman
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/lolita89/mama-web-project">
+                        <div class="project">
+                            Web Project
+                        </div>
+                    </a>
+
+                    <a href="Other-projects/website done/index.html">
+                        <div class="project">
+                            Intranet (footer)
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2><a id="contact">Send me a message</a></h2>
+                <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbygRo5VEw_OXCffI2UPy8RCiCo9A3JU__LxefA2DR80T6jePjEs/exec">
+                    <!-- change the form action to your script url -->
+
+                    <div class="form-elements">
+                        <fieldset class="pure-group contoh">
+                            <label for="name">Name: </label>
+                            <input id="name" name="name" placeholder="Your fullname please :)" />
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="message">Message: </label>
+                            <textarea id="message" name="message" rows="10" placeholder="Tell me what's on your mind..."></textarea>
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="email"><em>Your</em> Email Address:</label>
+                            <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+                            <span class="email-invalid" style="display:none">
+                                Must be a valid email address</span>
+                        </fieldset>
+
+                        <button class="contact-submit button-success pure-button button-xlarge">
+                            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                    </div>
+
+                    <!-- Customise the Thankyou Message People See when they submit the form: -->
+                    <div class="thankyou_message" style="display:none;">
+                        <h2><em>Thanks</em> for contacting me!
+                            I will get back to you soon!</h2>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="map-section">
+                <h2>Meet me here!</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.1310445546114!2d4.978748115963845!3d52.34990847978244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60eae55abe50f%3A0xa99bd261e175c064!2sFregat%2C+Diemen!5e0!3m2!1sid!2snl!4v1538504914609"
+                allowfullscreen></iframe>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.facebook.com/cikalolita"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/cikalolita/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/lolita89"><i class="fab fa-github-square"></i></a>
+        <span class="copyright">&copy; Copyright 2018 Cika Lolita Sugiharto</span>
+    </footer>
+
+    <script src="portfolio.js"></script>
+    <script src="form-submission-handler.js"></script>
+
+</body>
+
+</html>
