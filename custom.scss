@@ -139,6 +139,7 @@ h2 {
 /* Contact */
 input:focus, textarea:focus {
     background-color: $main-second-color;
+    color: $main-white-color;
 }
 
 .contact-section {
@@ -217,7 +218,13 @@ iframe:hover {
     color: #4875B4;
 }
 
+.fa-github-square:hover {
+    color: #333;
+}
+
 .copyright {
+    margin: 3px;
+    display: block;
     font-size: 15px;
 }
 
