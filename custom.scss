@@ -100,6 +100,16 @@ h2 {
     padding: 20px;
 }
 
+.git-link {
+    color: $main-text-color;
+    text-decoration: none;
+}
+
+.git-link:hover {
+    color: #333; 
+    text-decoration: none;
+}
+
 /* Portfolio show section */
 .portfolio-section {
     padding: 20px;
